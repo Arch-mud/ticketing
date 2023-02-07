@@ -4,8 +4,7 @@ import { TicketCreatedEvent } from './ticket-created-event';
 import { Subjects } from './subjects';
 
 export class TicketCreatedListener extends Listener<TicketCreatedEvent> {
-  //subject: Subjects.TicketCreated = Subjects.TicketCreated;//like final keyword in Java welt
-  readonly subject = Subjects.TicketCreated;//readonly like final keyword in Java welt
+  readonly subject = Subjects.TicketCreated;
   queueGroupName = 'payments-service';
 
   onMessage(data: TicketCreatedEvent['data'], msg: Message) {
