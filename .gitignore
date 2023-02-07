@@ -1,4 +1,4 @@
-common
+common/
 .DS_Store
 # Logs
 logs
