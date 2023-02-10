@@ -47,7 +47,7 @@ it('returns a 400 when purchasing a cancelled order', async () => {
 
   await request(app)
     .post('/api/payments')
-    .set('Cookie', global.signin())
+    .set('Cookie', global.signin(userId))
     .send({
       orderId: order.id,
       token: 'asdlkfj',
