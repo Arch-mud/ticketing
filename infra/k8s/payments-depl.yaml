@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: payments
-          image: us.gcr.io/annular-ray-376008/payments
+          image: limayo/payments
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
