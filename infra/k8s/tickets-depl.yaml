@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tickets
-          image: us.gcr.io/annular-ray-376008/tickets
+          image: limayo/tickets
           env:
             - name: NATS_CLIENT_ID
               valueFrom:

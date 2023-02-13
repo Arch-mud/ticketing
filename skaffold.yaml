@@ -6,12 +6,12 @@ deploy:
       - ./infra/k8s/*
       - ./infra/k8s-dev/*
 build:
-  # local:
-  #   push: false
-  googleCloudBuild:
-    projectId: annular-ray-376008
+    local:
+      push: false
+  #googleCloudBuild:
+  #  projectId: annular-ray-376008
   artifacts:
-    - image: us.gcr.io/annular-ray-376008/auth
+    - image: limayo/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -19,7 +19,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/annular-ray-376008/ticketing-client
+    - image: limayo/ticketing-client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -27,7 +27,7 @@ build:
         manual:
           - src: "**/*.js"
             dest: .
-    - image: us.gcr.io/annular-ray-376008/tickets
+    - image: limayo/tickets
       context: tickets
       docker:
         dockerfile: Dockerfile
@@ -35,7 +35,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/annular-ray-376008/orders
+    - image: limayo/orders
       context: orders
       docker:
         dockerfile: Dockerfile
@@ -43,7 +43,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/annular-ray-376008/expiration
+    - image: limayo/expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
@@ -51,7 +51,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/annular-ray-376008/payments
+    - image: limayo/payments
       context: payments
       docker:
         dockerfile: Dockerfile
