@@ -8,7 +8,7 @@ import { PaymentCreatedListener } from './events/listeners/payment-created-liste
 
 const start = async () => {
 
-  console.log('starting up.......again!');
+  console.log('starting up.');
 
 
   if (!process.env.JWT_KEY) {
