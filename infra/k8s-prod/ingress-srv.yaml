@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   rules:
-    - host: www.iseghrin-app-prod.store/
+    - host: www.iseghrin-app-prod.store
       http:
         paths:
           - path: /api/payments/?(.*)
