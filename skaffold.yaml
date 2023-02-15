@@ -4,12 +4,10 @@ deploy:
   kubectl:
     manifests:
       - ./infra/k8s/*
-      - ./infra/k8s-dev/*
+     #- ./infra/k8s-dev/*
 build:
-    local:
-      push: false
-  #googleCloudBuild:
-  #  projectId: annular-ray-376008
+  local:
+    push: false
   artifacts:
     - image: limayo/auth
       context: auth
